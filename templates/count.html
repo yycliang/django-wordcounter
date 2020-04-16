@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Count</title>
+  </head>
+  <body>
+    <h1>There are {{ count }} words in your text</h1>
+    <h2><a href="{% url 'home' %}">Start Again</a></h2>
+    <h2><a href="{% url 'about' %}">About</a></h2>
+    <h2>Original Text:</h2>
+    {{fulltext}}
+    <h2>Word Count:</h2>
+    {% for word, count in dictionary %}
+
+    {{ word }}
+
+    <br>
+
+    {{ count }}
+
+    <br>
+
+    {% endfor %}
+  </body>
+</html>
